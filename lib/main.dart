@@ -8,65 +8,57 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int number = 0;
-
-  void addNum() {
-    setState(() {
-      number += 1;
-    });
-  }
-
+  List<Widget> widgets = [];
+  int counter = 1;
+//constructor
+  // _MyAppState() {
+  //   for (int i = 0; i < 30; i++) {
+  //     widgets.add(Text(
+  //       "Data ke-" + i.toString(),
+  //       style: TextStyle(fontSize: 20),
+  //     ));
+  //   }
+  // }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Textstyle"),
+          title: Text("List and ListView"),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Text(
-                number.toString(),
-                style: TextStyle(fontSize: 11 + number.toDouble()),
-              ),
-              RaisedButton(
-                child: Text("Add Number"),
-                onPressed: addNum,
-              ),
-              Text(
-                number.toString(),
-                style: TextStyle(fontSize: 11 + number.toDouble()),
-              ),
-              RaisedButton(
-                padding: EdgeInsets.all(8),
-                child: Text(
-                  "Add Number yogi arif widodo",
-                  style: TextStyle(
-                    fontFamily: "OperatorMonoBoldRegular",
-                    fontStyle: FontStyle.italic,
-                    fontSize: 18,
-                  ),
+        body: ListView(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                RaisedButton(
+                  child: Text("Tambah Data"),
+                  onPressed: () {
+                    setState(() {
+                      widgets.add(Text(
+                        "Data ke-" + counter.toString(),
+                        style: TextStyle(fontSize: 18),
+                      ));
+                      counter++;
+                    });
+                  },
                 ),
-                onPressed: () {
-                  setState(() {
-                    number += 1;
-                  });
-                },
-              ),
-              Text(
-                "\ntext style",
-                style: TextStyle(
-                    // fontFamily: "OperatorMonoBoldRegular",
-                    // fontStyle: FontStyle.italic,
-                    fontSize: 18,
-                    decoration: TextDecoration.overline,
-                    decorationColor: Colors.red,
-                    decorationThickness: 5, // thicknes doesnt work on web
-                    decorationStyle: TextDecorationStyle.wavy),
-              ),
-            ],
-          ),
+                RaisedButton(
+                  child: Text("Hapus Data"),
+                  onPressed: () {
+                    setState(() {
+                      widgets.removeLast();
+                      counter--;
+                    });
+                  },
+                )
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: widgets,
+            )
+          ],
         ),
       ),
     );
