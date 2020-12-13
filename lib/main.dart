@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -8,57 +10,28 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<Widget> widgets = [];
-  int counter = 1;
-//constructor
-  // _MyAppState() {
-  //   for (int i = 0; i < 30; i++) {
-  //     widgets.add(Text(
-  //       "Data ke-" + i.toString(),
-  //       style: TextStyle(fontSize: 20),
-  //     ));
-  //   }
-  // }
+  Random random = Random();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("List and ListView"),
+          title: Text("Animated Contaienr"),
         ),
-        body: ListView(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                RaisedButton(
-                  child: Text("Tambah Data"),
-                  onPressed: () {
-                    setState(() {
-                      widgets.add(Text(
-                        "Data ke-" + counter.toString(),
-                        style: TextStyle(fontSize: 18),
-                      ));
-                      counter++;
-                    });
-                  },
-                ),
-                RaisedButton(
-                  child: Text("Hapus Data"),
-                  onPressed: () {
-                    setState(() {
-                      widgets.removeLast();
-                      counter--;
-                    });
-                  },
-                )
-              ],
+        body: Center(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {});
+            },
+            child: AnimatedContainer(
+              color: Color.fromARGB(255, random.nextInt(256),
+                  random.nextInt(256), random.nextInt(256)),
+              duration: Duration(seconds: 1),
+              width: 50.0 + random.nextInt(101),
+              height: 50.0 + random.nextInt(101),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: widgets,
-            )
-          ],
+          ),
         ),
       ),
     );
