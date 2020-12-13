@@ -62,7 +62,8 @@ class _MyAppState extends State<MyApp> {
                     fontSize: 18,
                     decoration: TextDecoration.overline,
                     decorationColor: Colors.red,
-                    decorationThickness: 5), // thicknes doesnt work on web
+                    decorationThickness: 5, // thicknes doesnt work on web
+                    decorationStyle: TextDecorationStyle.wavy),
               ),
             ],
           ),
