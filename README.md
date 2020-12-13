@@ -1,6 +1,7 @@
-# hello_world
+# flutter_basic_to_advance
 
-A new Flutter project.
+flutter_basic_to_advance for web, android and ios ( mobile )
+soon desktop
 
 ## Getting Started
 
