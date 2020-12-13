@@ -33,6 +33,18 @@ class _MyAppState extends State<MyApp> {
               RaisedButton(
                 child: Text("Add Number"),
                 onPressed: addNum,
+              ),
+              Text(
+                number.toString(),
+                style: TextStyle(fontSize: 11 + number.toDouble()),
+              ),
+              RaisedButton(
+                child: Text("Add Number yogi arif widodo"),
+                onPressed: () {
+                  setState(() {
+                    number += 1;
+                  });
+                },
               )
             ],
           ),
