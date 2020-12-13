@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("StateFull Widget"),
+          title: Text("Textstyle"),
         ),
         body: Center(
           child: Column(
@@ -39,13 +39,31 @@ class _MyAppState extends State<MyApp> {
                 style: TextStyle(fontSize: 11 + number.toDouble()),
               ),
               RaisedButton(
-                child: Text("Add Number yogi arif widodo"),
+                padding: EdgeInsets.all(8),
+                child: Text(
+                  "Add Number yogi arif widodo",
+                  style: TextStyle(
+                    fontFamily: "OperatorMonoBoldRegular",
+                    fontStyle: FontStyle.italic,
+                    fontSize: 18,
+                  ),
+                ),
                 onPressed: () {
                   setState(() {
                     number += 1;
                   });
                 },
-              )
+              ),
+              Text(
+                "\ntext style",
+                style: TextStyle(
+                    // fontFamily: "OperatorMonoBoldRegular",
+                    // fontStyle: FontStyle.italic,
+                    fontSize: 18,
+                    decoration: TextDecoration.overline,
+                    decorationColor: Colors.red,
+                    decorationThickness: 5), // thicknes doesnt work on web
+              ),
             ],
           ),
         ),
