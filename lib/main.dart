@@ -10,23 +10,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Aplikasi Hello World"),
-        ),
-        body: Column(
-          // Column | Row
-          mainAxisAlignment: MainAxisAlignment.center, // rata tengah vertical
-          crossAxisAlignment: CrossAxisAlignment.start, // rata kiri
-          children: [
-            Text("text 1"),
-            Text("text 2"),
-            Text("text 3"),
-            Row(
-              children: [Text("text 4"), Text("text 5"), Text("text 6")],
-            )
-          ],
-        ),
-      ),
+          appBar: AppBar(
+            title: Text("Aplikasi Hello World"),
+          ),
+          body: Container(
+            color: Colors.lightBlueAccent,
+            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+            padding: EdgeInsets.all(20),
+            child: Container(
+              // margin: EdgeInsets.only(bottom: 20, top: 20),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomLeft,
+                      colors: [Colors.amber, Colors.blue])),
+            ),
+          )),
     );
   }
 }
