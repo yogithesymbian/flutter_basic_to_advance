@@ -1,39 +1,23 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:hello_world/screen/home/home_screen.dart';
+import 'package:hello_world/utils/constants.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  Random random = Random();
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Animated Contaienr"),
-        ),
-        body: Center(
-          child: GestureDetector(
-            onTap: () {
-              setState(() {});
-            },
-            child: AnimatedContainer(
-              color: Color.fromARGB(255, random.nextInt(256),
-                  random.nextInt(256), random.nextInt(256)),
-              duration: Duration(seconds: 1),
-              width: 50.0 + random.nextInt(101),
-              height: 50.0 + random.nextInt(101),
-            ),
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: "Absensi - Polnes",
+      theme: ThemeData(
+          scaffoldBackgroundColor: kBackgroundColor,
+          primaryColor: kPrimaryColor,
+          textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+          visualDensity: VisualDensity.adaptivePlatformDensity),
+      home: HomeScreen(),
     );
   }
 }
