@@ -54,9 +54,11 @@ class YawCardImaTxt extends StatelessWidget {
                           text: "$title\n".toUpperCase(),
                           style: Theme.of(context).textTheme.button),
                       TextSpan(
-                          text: "$subTitle".toUpperCase(),
-                          style:
-                              TextStyle(color: kPrimaryColor.withOpacity(0.5)))
+                        text: "$subTitle".toUpperCase(),
+                        style: TextStyle(
+                          color: kPrimaryColor.withOpacity(0.5),
+                        ),
+                      )
                     ]),
                   ),
                   Spacer(),
