@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:hello_world/screen/home/home_screen.dart';
 import 'package:hello_world/utils/constants.dart';

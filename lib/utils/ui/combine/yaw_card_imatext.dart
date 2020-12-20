@@ -19,10 +19,10 @@ class YawCardImaTxt extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.only(
-          left: kDefaultPadding,
+          left: kDefaultPadding * 1.5,
           top: kDefaultPadding / 2,
           bottom: kDefaultPadding * 2.5),
-      width: size.width * 0.25,
+      width: size.width * 0.35,
       child: Column(
         children: [
           Image(
@@ -48,20 +48,22 @@ class YawCardImaTxt extends StatelessWidget {
                   ]),
               child: Row(
                 children: [
-                  RichText(
-                    text: TextSpan(children: [
-                      TextSpan(
-                          text: "$title\n".toUpperCase(),
-                          style: Theme.of(context).textTheme.button),
-                      TextSpan(
-                        text: "$subTitle".toUpperCase(),
-                        style: TextStyle(
-                          color: kPrimaryColor.withOpacity(0.5),
-                        ),
-                      )
-                    ]),
+                  Expanded(
+                    child: RichText(
+                      overflow: TextOverflow.ellipsis,
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: "$title\n".toUpperCase(),
+                            style: Theme.of(context).textTheme.button),
+                        TextSpan(
+                          text: "$subTitle".toUpperCase(),
+                          style: TextStyle(
+                            color: kPrimaryColor.withOpacity(0.5),
+                          ),
+                        )
+                      ]),
+                    ),
                   ),
-                  Spacer(),
                   Text(
                     "\$$price",
                     style: Theme.of(context)

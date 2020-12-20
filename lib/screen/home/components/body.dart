@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/screen/home/components/header_with_search_box.dart';
-import 'package:hello_world/utils/ui/button_rounded.dart';
-import 'package:hello_world/utils/constants.dart';
 import 'package:hello_world/utils/ui/combine/title_underline_with_more_btn.dart';
 import 'package:hello_world/utils/ui/combine/yaw_card_imatext.dart';
-import 'package:hello_world/utils/ui/title_with_underline.dart';
 
 class Body extends StatelessWidget {
   @override
