@@ -45,31 +45,141 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
     }
   }
 
+  int number = 0;
+  String txtMsg = "saya sedang melatih kemampuan flutter saya";
+
+  void tekanTombol() {
+    setState(() {
+      number += 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Application site demo"),
-      ),
-      body: Center(
-          child: Container(
-              color: Colors.lightBlue,
-              width: 150,
-              height: 100,
-              child: Text(
-                "saya sedang melatih kemampuan flutter saya",
-                // maxLines: 2,
-                // overflow: TextOverflow.clip,
-                // softWrap: false // default true
+        appBar: AppBar(
+          title: Text("Application site demo"),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+                child: Container(
+                    color: Colors.lightBlue,
+                    width: 150,
+                    height: 100,
+                    child: Text(
+                      txtMsg.toString(),
+                      // maxLines: 2,
+                      // overflow: TextOverflow.clip,
+                      // softWrap: false // default true
 
-                // textAlign: TextAlign.center,
+                      // textAlign: TextAlign.center,
 
-                style: TextStyle(
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20),
+                    ))),
+            Divider(),
+            Text("text 1"),
+            Container(
+                // color: Colors.black, // has moved to decoration
+                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.black,
+                          Colors.blue,
+                          Colors.white,
+                          Colors.white
+                        ])),
+                child: Container(
+                  color: Colors.blue,
+                  margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                  padding: EdgeInsets.all(10),
+                  child: Container(
+                    margin: EdgeInsets.only(left: 10, right: 10),
+                    padding: EdgeInsets.all(10),
                     color: Colors.white,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20),
-              ))),
-    );
+                    child: Row(
+                      children: [
+                        Spacer(),
+                        Text(
+                          "hai yogi",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        Spacer(),
+                        Text("hai yogi"),
+                        Spacer(),
+                        Text("hai yogi"),
+                        Spacer(),
+                      ],
+                    ),
+                  ),
+                )),
+            Text("text 3"),
+            Text("text 4"),
+            Divider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("text 1"),
+                Text("text 2"),
+                Text("text 3"),
+                Text("text 4"),
+              ],
+            ),
+            Divider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("text 1"),
+                Text("text 2"),
+                Text("text 3"),
+                Text("text 4"),
+              ],
+            ),
+            Divider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text("text 1"),
+                Text("text 2"),
+                Text("text 3"),
+                Text("text 4"),
+              ],
+            ),
+            Divider(),
+            // yoLearn@stateFullWidget
+            Center(
+              child: Column(
+                children: [
+                  Text(
+                    number.toString(),
+                    style: TextStyle(fontSize: 10 + number.toDouble()),
+                  ),
+                  RaisedButton(
+                      child: Text("Tambah Bilangan"), onPressed: tekanTombol)
+                ],
+              ),
+            ),
+            RaisedButton(
+                child: Text("change string message"),
+                // yoLearn@anonyMouseMethod
+                onPressed: () {
+                  setState(() {
+                    txtMsg = "some button from anonymouse (once todo)";
+                  });
+                }),
+            Divider()
+          ],
+        ));
   }
 }
