@@ -51,7 +51,25 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
       appBar: AppBar(
         title: Text("Application site demo"),
       ),
-      body: Container(),
+      body: Center(
+          child: Container(
+              color: Colors.lightBlue,
+              width: 150,
+              height: 100,
+              child: Text(
+                "saya sedang melatih kemampuan flutter saya",
+                // maxLines: 2,
+                // overflow: TextOverflow.clip,
+                // softWrap: false // default true
+
+                // textAlign: TextAlign.center,
+
+                style: TextStyle(
+                    color: Colors.white,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20),
+              ))),
     );
   }
 }
