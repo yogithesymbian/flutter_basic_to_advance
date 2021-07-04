@@ -30,9 +30,10 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
         child: Center(
           child: Column(
             children: [
+              YoTitleTxt("Flutter Basic Knowledge"),
               FlutterBasicKnowledge(),
               Divider(),
-              FlutterLayoutBasicWidgets(),
+              YoTitleTxt("Flutter Layout + Basic Widgets"),
             ],
           ),
         ),
@@ -41,17 +42,20 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
   }
 }
 
-class FlutterLayoutBasicWidgets extends StatelessWidget {
-  const FlutterLayoutBasicWidgets({
+class YoTitleTxt extends StatelessWidget {
+  const YoTitleTxt(
+    this.dataTxt, {
     Key key,
   }) : super(key: key);
+
+  final String dataTxt;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          "Flutter Layout + Basic Widgets",
+          dataTxt.toString(),
           style: TextStyle(
               fontSize: 15, fontWeight: FontWeight.bold, color: Colors.blue),
         ),
@@ -69,17 +73,6 @@ class FlutterBasicKnowledge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Text(
-              "Flutter Basic Knowledge",
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue),
-            ),
-          ],
-        ),
         Divider(),
         SizedBox(
           width: double.infinity,
