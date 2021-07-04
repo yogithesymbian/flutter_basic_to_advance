@@ -31,6 +31,7 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
           child: Column(
             children: [
               YoTitleTxt("Flutter Basic Knowledge"),
+              Divider(),
               FlutterBasicKnowledge(),
               Divider(),
               YoTitleTxt("Flutter Layout + Basic Widgets"),
@@ -73,32 +74,11 @@ class FlutterBasicKnowledge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Divider(),
         YoMatchParentBtn("First Application", () {}),
-        SizedBox(
-          width: double.infinity,
-          child: RaisedButton(
-            color: Colors.blue,
-            onPressed: () {
-              Navigator.pushNamed(context, lifeCyclePageRoute);
-            },
-            child: Text(
-              "Application Life Cycle state",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: double.infinity,
-          child: RaisedButton(
-            color: Colors.blue,
-            onPressed: () {},
-            child: Text(
-              "SplashScreen Android & IOS",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),
+        YoMatchParentBtn("Application Life Cycle state", () {
+          Navigator.pushNamed(context, lifeCyclePageRoute);
+        }),
+        YoMatchParentBtn("SplashScreen Android & IOS", () {}),
       ],
     );
   }
@@ -112,16 +92,17 @@ class YoMatchParentBtn extends StatelessWidget {
   }) : super(key: key);
 
   final String dataTxt;
-  Function press;
+  final Function press;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: RaisedButton(
         color: Colors.blue,
-        onPressed: () {},
+        onPressed: press,
         child: Text(
-          "First Application",
+          dataTxt,
           style: TextStyle(color: Colors.white),
         ),
       ),
