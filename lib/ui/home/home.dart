@@ -74,17 +74,7 @@ class FlutterBasicKnowledge extends StatelessWidget {
     return Column(
       children: [
         Divider(),
-        SizedBox(
-          width: double.infinity,
-          child: RaisedButton(
-            color: Colors.blue,
-            onPressed: () {},
-            child: Text(
-              "First Application",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),
+        YoMatchParentBtn("First Application", () {}),
         SizedBox(
           width: double.infinity,
           child: RaisedButton(
@@ -110,6 +100,31 @@ class FlutterBasicKnowledge extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class YoMatchParentBtn extends StatelessWidget {
+  const YoMatchParentBtn(
+    this.dataTxt,
+    this.press, {
+    Key key,
+  }) : super(key: key);
+
+  final String dataTxt;
+  Function press;
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: RaisedButton(
+        color: Colors.blue,
+        onPressed: () {},
+        child: Text(
+          "First Application",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
     );
   }
 }
