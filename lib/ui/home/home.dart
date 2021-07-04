@@ -30,19 +30,40 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
         child: Center(
           child: Column(
             children: [
-              RaisedButton(
-                onPressed: () {},
-                child: Text("First Application"),
+              SizedBox(
+                width: double.infinity,
+                child: RaisedButton(
+                  color: Colors.blue,
+                  onPressed: () {},
+                  child: Text(
+                    "First Application",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ),
-              RaisedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, lifeCyclePageRoute);
-                },
-                child: Text("Application Life Cycle state"),
+              SizedBox(
+                width: double.infinity,
+                child: RaisedButton(
+                  color: Colors.blue,
+                  onPressed: () {
+                    Navigator.pushNamed(context, lifeCyclePageRoute);
+                  },
+                  child: Text(
+                    "Application Life Cycle state",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ),
-              RaisedButton(
-                onPressed: () {},
-                child: Text("SplashScreen Android & IOS"),
+              SizedBox(
+                width: double.infinity,
+                child: RaisedButton(
+                  color: Colors.blue,
+                  onPressed: () {},
+                  child: Text(
+                    "SplashScreen Android & IOS",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               )
             ],
           ),
