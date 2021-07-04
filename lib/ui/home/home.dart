@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/router/constant.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,7 +35,9 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
                 child: Text("First Application"),
               ),
               RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, lifeCyclePageRoute);
+                },
                 child: Text("Application Life Cycle state"),
               ),
               RaisedButton(
