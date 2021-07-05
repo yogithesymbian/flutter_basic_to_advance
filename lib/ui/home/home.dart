@@ -1,18 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/router/constant.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ListCourseYtPage(),
-    );
-  }
-}
-
 class ListCourseYtPage extends StatefulWidget {
   @override
   _ListCourseYtPageState createState() => _ListCourseYtPageState();
@@ -35,6 +23,11 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
               FlutterBasicKnowledge(),
               Divider(),
               YoTitleTxt("Flutter Layout + Basic Widgets"),
+              Divider(),
+              YoTitleTxt("Other Basic Knowledge"),
+              YoMatchParentBtn("Navigation", () {
+                Navigator.pushNamed(context, mainNavigationPage);
+              })
             ],
           ),
         ),

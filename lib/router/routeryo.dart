@@ -4,6 +4,7 @@ import 'package:hello_world/ui/basic_knowledge/life_cycle_state.dart';
 import 'package:hello_world/ui/home/home.dart';
 import 'package:hello_world/ui/list_listview.dart';
 import 'package:hello_world/router/constant.dart';
+import 'package:hello_world/ui/other_basic_knowledge/main_navigation_page.dart';
 
 class RouterYo {
   static Route generateRoute(RouteSettings settings) {
@@ -12,6 +13,8 @@ class RouterYo {
         return MaterialPageRoute(builder: (_) => ListCourseYtPage());
       case lifeCyclePageRoute:
         return MaterialPageRoute(builder: (_) => LifeCyclePage());
+      case mainNavigationPage:
+        return MaterialPageRoute(builder: (_) => MainNavigationPage());
       case epsUntileNineRoute:
         return MaterialPageRoute(builder: (_) => MainPage());
       case listViewRoute:
