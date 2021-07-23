@@ -2,6 +2,7 @@
 
 flutter_basic_to_advance for web, android and ios ( mobile )
 soon desktop
+![Flutter Basic](/assets/images/flutter_basic_knowledge_yogithesymbian.png?raw=true "Flutter Basic")
 
 ## Getting Started
 
