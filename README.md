@@ -1,6 +1,6 @@
 # hello_world
 
-![Flutter Basic](/assets/images/yo_flutter_basic_knowledge_yogithesymbian.png.png?raw=true "Flutter Basic")
+![Flutter Basic](/assets/images/yo_flutter_basic_knowledge_yogithesymbian.png?raw=true "Flutter Basic")
 
 
 ## Getting Started
