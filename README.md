@@ -1,6 +1,7 @@
 # hello_world
 
-A new Flutter project.
+![Flutter Basic](/assets/images/flutter_basic_knowledge_yogithesymbian.png?raw=true "Flutter Basic")
+
 
 ## Getting Started
 
