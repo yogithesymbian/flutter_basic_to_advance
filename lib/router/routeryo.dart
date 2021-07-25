@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/ui/a_01_09.dart';
 import 'package:hello_world/ui/basic_knowledge/life_cycle_state.dart';
+import 'package:hello_world/ui/firebase/firebase_home.dart';
 import 'package:hello_world/ui/home/home.dart';
 import 'package:hello_world/ui/list_listview.dart';
 import 'package:hello_world/router/constant.dart';
@@ -19,6 +20,8 @@ class RouterYo {
         return MaterialPageRoute(builder: (_) => MainPage());
       case listViewRoute:
         return MaterialPageRoute(builder: (_) => ListViewPage());
+      case firebaseHomePageRoute:
+        return MaterialPageRoute(builder: (_) => FirebaseHome());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

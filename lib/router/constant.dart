@@ -4,3 +4,5 @@ const String mainNavigationPage = 'MainNavigationPage';
 
 const String epsUntileNineRoute = '/MyApp';
 const String listViewRoute = '/ListViewPage';
+
+const String firebaseHomePageRoute = '/FirebaseHomePage';

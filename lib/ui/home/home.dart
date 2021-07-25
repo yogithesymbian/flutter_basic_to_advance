@@ -27,6 +27,11 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
               YoTitleTxt("Other Basic Knowledge"),
               YoMatchParentBtn("Navigation", () {
                 Navigator.pushNamed(context, mainNavigationPage);
+              }),
+              Divider(),
+              YoTitleTxt("Firebase"),
+              YoMatchParentBtn("Authentication Anonymouse", () {
+                Navigator.pushNamed(context, firebaseHomePageRoute);
               })
             ],
           ),
