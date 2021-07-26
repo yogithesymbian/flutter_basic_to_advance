@@ -20,8 +20,8 @@ class RouterYo {
         return MaterialPageRoute(builder: (_) => MainPage());
       case listViewRoute:
         return MaterialPageRoute(builder: (_) => ListViewPage());
-      case firebaseHomePageRoute:
-        return MaterialPageRoute(builder: (_) => FirebaseHome());
+      // case firebaseHomePageRoute:
+      //   return MaterialPageRoute(builder: (_) => FirebaseHome());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

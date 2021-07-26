@@ -24,9 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
-  firebase_auth: ^0.15.5+2
+  # firebase_auth: ^0.15.5+2
   flutter_svg: ^0.17.4
-  provider: ^4.0.4
+  # provider: ^4.0.4
 
 dev_dependencies:
   flutter_test:
