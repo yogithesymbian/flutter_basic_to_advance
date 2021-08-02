@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/router/constant.dart';
+import 'package:flutterbasic/components/button.dart';
+import 'package:flutterbasic/router/constant.dart';
 
 class ListCourseYtPage extends StatefulWidget {
   @override
@@ -29,8 +30,8 @@ class _ListCourseYtPageState extends State<ListCourseYtPage> {
                 Navigator.pushNamed(context, mainNavigationPage);
               }),
               Divider(),
-              YoTitleTxt("Firebase"),
-              YoMatchParentBtn("Authentication Anonymouse", () {
+              YoTitleTxt("Firebase ( android & ios )"),
+              YoMatchParentBtn("Authentication User", () {
                 Navigator.pushNamed(context, firebaseHomePageRoute);
               })
             ],
@@ -78,32 +79,6 @@ class FlutterBasicKnowledge extends StatelessWidget {
         }),
         YoMatchParentBtn("SplashScreen Android & IOS", () {}),
       ],
-    );
-  }
-}
-
-class YoMatchParentBtn extends StatelessWidget {
-  const YoMatchParentBtn(
-    this.dataTxt,
-    this.press, {
-    Key key,
-  }) : super(key: key);
-
-  final String dataTxt;
-  final Function press;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: RaisedButton(
-        color: Colors.blue,
-        onPressed: press,
-        child: Text(
-          dataTxt,
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
     );
   }
 }

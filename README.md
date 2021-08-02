@@ -1,4 +1,4 @@
-# hello_world
+# flutterbasic
 
 ![Flutter Basic](/assets/images/yo_flutter_basic_knowledge_yogithesymbian.png?raw=true "Flutter Basic")
 
